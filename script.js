@@ -11,7 +11,7 @@ function openTab(tabId, event) {
   event.currentTarget.classList.add("active");
 }
 
-const steps = document.querySelectorAll(".process-step");
+const steps = document.querySelectorAll(".process-card");
 
 function showStep(index) {
   steps.forEach((step, i) => {
@@ -32,5 +32,4 @@ function prevStep() {
   showStep(currentStep);
 }
 
-// Initialize first step
 showStep(currentStep);
