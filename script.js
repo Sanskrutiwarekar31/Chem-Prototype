@@ -1,5 +1,5 @@
 // -------------------- TAB NAVIGATION --------------------
-function showSection(sectionId) {
+function showSection(event, sectionId) {
   const sections = document.querySelectorAll(".section");
   sections.forEach(section => section.classList.remove("active-section"));
 
@@ -7,8 +7,10 @@ function showSection(sectionId) {
 
   const tabs = document.querySelectorAll(".tab");
   tabs.forEach(tab => tab.classList.remove("active"));
-  event.target.classList.add("active");
+
+  event.currentTarget.classList.add("active");
 }
+
 
 // -------------------- CHEMICAL FILTER --------------------
 function filterChemicals(type) {
@@ -152,3 +154,4 @@ function stopAutoPlay() {
 
 // Initial UI load
 updateProcessUI();
+
