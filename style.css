@@ -7,11 +7,42 @@ body {
   font-family: 'Nunito', sans-serif;
   background: #f8fdfb;
   color: #1f3d3d;
+  overflow-x: hidden;
+}
+
+/* Floating bubbles background */
+.bubbles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bubbles span {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background: rgba(43, 179, 163, 0.2);
+  border-radius: 50%;
+  animation: rise 12s infinite ease-in;
+}
+
+.bubbles span:nth-child(1) { left: 10%; animation-duration: 10s; }
+.bubbles span:nth-child(2) { left: 30%; animation-duration: 12s; }
+.bubbles span:nth-child(3) { left: 50%; animation-duration: 14s; }
+.bubbles span:nth-child(4) { left: 70%; animation-duration: 11s; }
+.bubbles span:nth-child(5) { left: 90%; animation-duration: 13s; }
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(0.6); opacity: 0.3; }
+  100% { transform: translateY(-110vh) scale(1); opacity: 0; }
 }
 
 header {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background: linear-gradient(135deg, #2bb3a3, #3aaed8);
   color: white;
 }
@@ -38,6 +69,7 @@ nav {
 .tab-btn:hover {
   background: #2bb3a3;
   color: white;
+  transform: translateY(-2px);
 }
 
 .tab-btn.active {
@@ -61,7 +93,7 @@ main {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -80,14 +112,21 @@ main {
 }
 
 .card.hover:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
 }
 
 .group-img {
-  width: 200px;
+  width: 220px;
   border-radius: 12px;
   margin-bottom: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
 .grid {
@@ -96,30 +135,55 @@ main {
   gap: 15px;
 }
 
-.process-list {
-  max-width: 600px;
-  margin: auto;
-  font-size: 1.1rem;
-}
-
-.process-list li {
-  margin: 10px 0;
-}
-
-.animation-box {
+/* Process Section */
+.process-container {
+  display: flex;
+  overflow: hidden;
+  max-width: 700px;
   margin: 20px auto;
-  width: 200px;
-  padding: 15px;
-  background: #dff5f2;
-  border-radius: 50px;
-  text-align: center;
-  animation: bubble 2s infinite ease-in-out;
+  position: relative;
 }
 
-@keyframes bubble {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+.process-step {
+  min-width: 100%;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease;
+  text-align: center;
+}
+
+.process-step.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.process-step img {
+  width: 250px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.process-controls {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.process-controls button {
+  background: #2bb3a3;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.process-controls button:hover {
+  background: #239a8c;
+  transform: scale(1.05);
 }
 
 .diagram-img {
