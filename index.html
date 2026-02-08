@@ -2,188 +2,268 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Liquid Soap – Chemistry Project</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="top-bar">
-  <div class="logo">
-    🧪 <span>Liquid Soap</span>
-    <small>Chemistry Project</small>
-  </div>
+  <!-- Header -->
+  <header class="top-bar">
+    <div class="logo">
+      🧪 <div>
+        <h2>Liquid Soap</h2>
+        <span>Chemistry Project</span>
+      </div>
+    </div>
 
-  <nav class="nav-tabs">
-    <button class="tab-btn active" onclick="openTab('group', event)">👥 Group Details</button>
-    <button class="tab-btn" onclick="openTab('chemicals', event)">🧪 Chemicals</button>
-    <button class="tab-btn" onclick="openTab('process', event)">▶ Process</button>
-    <button class="tab-btn" onclick="openTab('diagrams', event)">📊 Diagrams</button>
-    <button class="tab-btn" onclick="openTab('videos', event)">🎥 Videos</button>
-    <button class="tab-btn" onclick="openTab('qa', event)">❓ Applications & Q&A</button>
-  </nav>
-</header>
+    <nav class="nav-tabs">
+      <button class="tab active" onclick="showSection('group')">👥 Group Details</button>
+      <button class="tab" onclick="showSection('chemicals')">🧴 Chemicals</button>
+      <button class="tab" onclick="showSection('process')">▶ Process</button>
+      <button class="tab" onclick="showSection('diagrams')">📊 Diagrams</button>
+      <button class="tab" onclick="showSection('videos')">🎥 Videos</button>
+      <button class="tab" onclick="showSection('applications')">❓ Applications & Q&A</button>
+    </nav>
+  </header>
 
-<main>
+  <!-- ================= GROUP DETAILS ================= -->
+  <section id="group" class="section active-section">
 
-  <!-- GROUP DETAILS -->
-  <section id="group" class="tab-content active">
-    <div class="main-card">
-      <div class="left-info">
+    <div class="hero-card">
+      <div class="hero-text">
         <h4>PROJECT TITLE</h4>
-        <h2>Liquid Soap Preparation</h2>
+        <h1>Liquid Soap Preparation</h1>
 
-        <div class="teacher-card">
-          🎓 <span>Guide / Teacher</span>
-          <strong>Dr. Abhijeet D. Patil</strong>
+        <div class="guide-box">
+          🎓 <div>
+            <strong>Guide / Teacher</strong><br />
+            Dr. Abhijeet D. Patil
+          </div>
         </div>
       </div>
 
-      <div class="right-photo">
-        <div class="photo-box">
-          🧪
-          <p>Group Photo<br><small>Add your team photo here</small></p>
+      <div class="hero-image">
+        <div class="image-placeholder">
+          🧪<br />
+          <small>Group Photo</small>
         </div>
       </div>
     </div>
 
-    <h3 class="section-title">Team Members</h3>
+    <h2 class="section-title">Team Members</h2>
 
     <div class="team-grid">
-      <div class="member-card">
+      <div class="team-card">
         👩‍🔬
-        <h4>Sanskruti Warekar</h4>
+        <h3>Sanskruti Warekar</h3>
         <p>PRN: 202401040075</p>
       </div>
-
-      <div class="member-card">
+      <div class="team-card">
         👩‍🔬
-        <h4>Akshata Bhosale</h4>
+        <h3>Akshata Bhosale</h3>
         <p>PRN: 202401040112</p>
       </div>
-
-      <div class="member-card">
+      <div class="team-card">
         👩‍🔬
-        <h4>Mansi Shinde</h4>
+        <h3>Mansi Shinde</h3>
         <p>PRN: 202401040077</p>
       </div>
-
-      <div class="member-card">
+      <div class="team-card">
         👨‍🔬
-        <h4>Ashutosh Singh</h4>
+        <h3>Ashutosh Singh</h3>
         <p>PRN: 202401040142</p>
       </div>
     </div>
+
   </section>
 
-  <!-- CHEMICALS -->
-  <section id="chemicals" class="tab-content">
-    <h2 class="section-title">Chemicals Used</h2>
-    <div class="team-grid">
-      <div class="member-card">🧪 Sodium Hydroxide (NaOH)</div>
-      <div class="member-card">💧 Water</div>
-      <div class="member-card">🥥 Coconut Oil</div>
-      <div class="member-card">🫒 Olive Oil</div>
-      <div class="member-card">🌸 Fragrance</div>
-      <div class="member-card">🎨 Colorants</div>
+  <!-- ================= CHEMICALS ================= -->
+  <section id="chemicals" class="section">
+
+    <div class="center-header">
+      🧪
+      <h1>Chemicals Used</h1>
+      <p>Essential ingredients for liquid soap preparation and their roles</p>
+    </div>
+
+    <div class="filter-buttons">
+      <button class="filter active" onclick="filterChemicals('all')">All</button>
+      <button class="filter" onclick="filterChemicals('oil')">Oil</button>
+      <button class="filter" onclick="filterChemicals('base')">Base</button>
+      <button class="filter" onclick="filterChemicals('solvent')">Solvent</button>
+      <button class="filter" onclick="filterChemicals('additive')">Additive</button>
+    </div>
+
+    <div class="chem-grid">
+
+      <div class="chem-card oil">
+        🟡
+        <span class="tag">Oil</span>
+        <h3>Castor Oil</h3>
+        <small>C₅₇H₁₀₄O₉</small>
+        <p>A vegetable oil that provides excellent lather and moisturizing properties.</p>
+      </div>
+
+      <div class="chem-card base">
+        🔴
+        <span class="tag">Base</span>
+        <h3>Sodium Hydroxide (NaOH)</h3>
+        <small>Caustic Soda / Lye</small>
+        <p>A strong base essential for saponification, reacting with oils to form soap.</p>
+      </div>
+
+      <div class="chem-card additive">
+        🔵
+        <span class="tag">Additive</span>
+        <h3>Sodium Chloride (NaCl)</h3>
+        <small>Common Salt</small>
+        <p>Used to adjust the consistency and clarity of the liquid soap.</p>
+      </div>
+
+      <div class="chem-card solvent">
+        🟢
+        <span class="tag">Solvent</span>
+        <h3>Distilled Water</h3>
+        <small>H₂O</small>
+        <p>Acts as a solvent to dissolve NaOH and mix all ingredients smoothly.</p>
+      </div>
+
+      <div class="chem-card additive">
+        🟣
+        <span class="tag">Additive</span>
+        <h3>Fragrance Oil</h3>
+        <small>Perfume</small>
+        <p>Adds pleasant scent to the soap.</p>
+      </div>
+
+      <div class="chem-card additive">
+        🟠
+        <span class="tag">Additive</span>
+        <h3>Coloring Agent</h3>
+        <small>Food-grade dye</small>
+        <p>Gives attractive color to the liquid soap.</p>
+      </div>
+
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section id="process" class="tab-content">
-    <h2 class="section-title">Soap Making Process (Animated)</h2>
+  <!-- ================= PROCESS ================= -->
+  <section id="process" class="section">
 
-    <div class="process-card active">
-      <h3>Step 1: Measure Ingredients</h3>
-      <p>Accurately measure oils, water, and sodium hydroxide.</p>
+    <div class="center-header">
+      🧪
+      <h1>Interactive Soap Making Process</h1>
+      <p>Follow along step-by-step with animated demonstrations</p>
     </div>
 
-    <div class="process-card">
-      <h3>Step 2: Prepare Lye Solution</h3>
-      <p>Slowly add sodium hydroxide to water.</p>
+    <div class="progress-bar">
+      <div id="progress-fill"></div>
     </div>
 
-    <div class="process-card">
-      <h3>Step 3: Mix Oils and Lye</h3>
-      <p>Combine both mixtures and stir until thick.</p>
-    </div>
+    <p id="step-indicator">Step 1 of 9</p>
 
     <div class="process-card">
-      <h3>Step 4: Add Fragrance & Color</h3>
-      <p>Add natural fragrance and color.</p>
-    </div>
 
-    <div class="process-card">
-      <h3>Step 5: Pour into Molds</h3>
-      <p>Pour mixture into molds.</p>
-    </div>
+      <h2 id="step-title">Measure Castor Oil</h2>
 
-    <div class="process-card">
-      <h3>Step 6: Curing</h3>
-      <p>Let the soap cure for 3–4 weeks.</p>
+      <div class="animation-box">
+        <div id="animation" class="animation">🧪 ➜ 🧴</div>
+      </div>
+
+      <p id="step-desc">
+        Measure 10 ml castor oil in a clean beaker.
+      </p>
+
+      <div class="duration">⏱ Duration: 1–2 min</div>
+
     </div>
 
     <div class="process-controls">
-      <button onclick="prevStep()">⬅ Previous</button>
-      <button onclick="nextStep()">Next ➡</button>
+      <button onclick="prevStep()">◀ Previous</button>
+      <button class="play-btn" onclick="autoPlay()">▶ Auto Play</button>
+      <button class="next-btn" onclick="nextStep()">Next ▶</button>
+      <button class="reset-btn" onclick="resetProcess()">↻ Reset</button>
+    </div>
+
+    <div class="step-dots">
+      <span class="dot active" onclick="goToStep(0)"></span>
+      <span class="dot" onclick="goToStep(1)"></span>
+      <span class="dot" onclick="goToStep(2)"></span>
+      <span class="dot" onclick="goToStep(3)"></span>
+      <span class="dot" onclick="goToStep(4)"></span>
+      <span class="dot" onclick="goToStep(5)"></span>
+      <span class="dot" onclick="goToStep(6)"></span>
+      <span class="dot" onclick="goToStep(7)"></span>
+      <span class="dot" onclick="goToStep(8)"></span>
+    </div>
+
+  </section>
+
+  <!-- ================= DIAGRAMS ================= -->
+  <section id="diagrams" class="section">
+    <h1 class="section-title">Block Diagram & Flow Diagram</h1>
+
+    <div class="diagram-box">
+      <h3>Block Diagram</h3>
+      <p>Oil → NaOH → Mixing → Heating → Additives → Liquid Soap</p>
+    </div>
+
+    <div class="diagram-box">
+      <h3>Flow Diagram</h3>
+      <p>Start → Measure → Mix → Heat → Add Salt → Cool → Add Fragrance → Filter → End</p>
     </div>
   </section>
 
-  <!-- DIAGRAMS -->
-  <section id="diagrams" class="tab-content">
-    <h2 class="section-title">Block & Flow Diagram</h2>
-    <div class="team-grid">
-      <div class="member-card">📊 Block Diagram Image</div>
-      <div class="member-card">🔁 Flow Diagram Image</div>
+  <!-- ================= VIDEOS ================= -->
+  <section id="videos" class="section">
+    <h1 class="section-title">Group Videos</h1>
+
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
     </div>
   </section>
 
-  <!-- VIDEOS -->
-  <section id="videos" class="tab-content">
-    <h2 class="section-title">Group Videos</h2>
-    <div class="team-grid">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  <!-- ================= APPLICATIONS & Q&A ================= -->
+  <section id="applications" class="section">
+    <h1 class="section-title">Applications, Advantages & Q&A</h1>
+
+    <div class="qa-box">
+      <h3>Applications</h3>
+      <ul>
+        <li>Hand wash</li>
+        <li>Dishwashing liquid</li>
+        <li>Cleaning surfaces</li>
+      </ul>
+    </div>
+
+    <div class="qa-box">
+      <h3>Advantages</h3>
+      <ul>
+        <li>Easy to use</li>
+        <li>Better hygiene</li>
+        <li>Economical</li>
+      </ul>
+    </div>
+
+    <div class="qa-box">
+      <h3>Questions & Answers</h3>
+      <p><strong>Q:</strong> Why is NaOH used?<br />
+         <strong>A:</strong> It helps in saponification to form soap.</p>
+
+      <p><strong>Q:</strong> Why is salt added?<br />
+         <strong>A:</strong> To thicken and clarify the soap.</p>
     </div>
   </section>
 
-  <!-- APPLICATIONS & Q&A -->
-  <section id="qa" class="tab-content">
-    <h2 class="section-title">Applications, Advantages & Q&A</h2>
+  <!-- Footer -->
+  <footer>
+    🧪 Soap Making Process – Chemistry Prototype Project<br />
+    Made with ❤️ by our Chemistry Group<br />
+    © 2025 Chemistry Project
+  </footer>
 
-    <h3>Applications</h3>
-    <ul>
-      <li>Personal hygiene</li>
-      <li>Clothing cleaning</li>
-      <li>Hospital sanitation</li>
-    </ul>
-
-    <h3>Advantages</h3>
-    <ul>
-      <li>Removes germs</li>
-      <li>Easy to prepare</li>
-      <li>Eco-friendly</li>
-    </ul>
-
-    <h3>Questions & Answers</h3>
-    <details>
-      <summary>What is soap?</summary>
-      <p>Soap is a cleaning agent made by reacting oils with alkali.</p>
-    </details>
-    <details>
-      <summary>Why is NaOH used?</summary>
-      <p>It helps in saponification.</p>
-    </details>
-  </section>
-
-</main>
-
-<footer>
-  <p>🧪 Soap Making Process | Made with ❤️ by our Chemistry Group</p>
-  <p>© 2025 Chemistry Project</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
