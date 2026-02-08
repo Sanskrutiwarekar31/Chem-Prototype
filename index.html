@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chemistry Prototype – Soap Making</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>🧪 Chemistry Prototype – Soap Making</h1>
+    <p>Interactive & Animated Educational Website</p>
+  </header>
+
+  <nav>
+    <button class="tab-btn active" onclick="openTab('group')">Group Details</button>
+    <button class="tab-btn" onclick="openTab('chemicals')">Chemicals</button>
+    <button class="tab-btn" onclick="openTab('process')">Process</button>
+    <button class="tab-btn" onclick="openTab('diagrams')">Diagrams</button>
+    <button class="tab-btn" onclick="openTab('videos')">Videos</button>
+    <button class="tab-btn" onclick="openTab('extra')">Applications & Q&A</button>
+  </nav>
+
+  <main>
+
+    <!-- 1. Group Details -->
+    <section id="group" class="tab-content active">
+      <h2>👩‍🔬 Group Details</h2>
+      <div class="card">
+        <img src="group.jpg" alt="Group Photo" class="group-img"/>
+        <p><strong>Group Name:</strong> Chemistry Innovators</p>
+        <p><strong>Members:</strong> Sanskruti, Member 2, Member 3</p>
+        <p><strong>Guide:</strong> Prof. ______</p>
+      </div>
+    </section>
+
+    <!-- 2. Chemicals -->
+    <section id="chemicals" class="tab-content">
+      <h2>⚗️ Chemicals Used</h2>
+      <div class="grid">
+        <div class="card hover">Sodium Hydroxide (NaOH)</div>
+        <div class="card hover">Water</div>
+        <div class="card hover">Coconut Oil</div>
+        <div class="card hover">Olive Oil</div>
+        <div class="card hover">Fragrance</div>
+        <div class="card hover">Colorants</div>
+      </div>
+    </section>
+
+    <!-- 3. Process -->
+    <section id="process" class="tab-content">
+      <h2>🔄 Soap Making Process</h2>
+      <ol class="process-list">
+        <li>Measure oils and water</li>
+        <li>Add sodium hydroxide to water carefully</li>
+        <li>Mix lye solution with oils</li>
+        <li>Stir until thick (trace stage)</li>
+        <li>Add fragrance and color</li>
+        <li>Pour into molds and let it cure</li>
+      </ol>
+      <div class="animation-box">🫧 Mixing in progress...</div>
+    </section>
+
+    <!-- 4. Diagrams -->
+    <section id="diagrams" class="tab-content">
+      <h2>📊 Block & Flow Diagram</h2>
+      <img src="block-diagram.png" alt="Block Diagram" class="diagram-img"/>
+      <img src="flow-diagram.png" alt="Flow Diagram" class="diagram-img"/>
+    </section>
+
+    <!-- 5. Videos -->
+    <section id="videos" class="tab-content">
+      <h2>🎥 Group Videos</h2>
+      <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- 6. Applications & Q&A -->
+    <section id="extra" class="tab-content">
+      <h2>📌 Applications, Advantages & Q&A</h2>
+
+      <h3>Applications</h3>
+      <ul>
+        <li>Personal hygiene</li>
+        <li>Cleaning clothes</li>
+        <li>Hospital sanitation</li>
+      </ul>
+
+      <h3>Advantages</h3>
+      <ul>
+        <li>Removes dirt and germs</li>
+        <li>Easy to make</li>
+        <li>Eco-friendly (if natural ingredients used)</li>
+      </ul>
+
+      <h3>Questions & Answers</h3>
+      <details>
+        <summary>What is soap?</summary>
+        <p>Soap is a cleaning agent made by reacting oils with alkali.</p>
+      </details>
+      <details>
+        <summary>Why is sodium hydroxide used?</summary>
+        <p>It helps in the chemical reaction called saponification.</p>
+      </details>
+      <details>
+        <summary>Is handmade soap safe?</summary>
+        <p>Yes, if prepared correctly with proper safety measures.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Chemistry Prototype Project | Designed by Sanskruti</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
