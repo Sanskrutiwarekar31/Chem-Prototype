@@ -18,13 +18,14 @@
     </div>
 
     <nav class="nav-tabs">
-      <button class="tab active" onclick="showSection('group')">👥 Group Details</button>
-      <button class="tab" onclick="showSection('chemicals')">🧴 Chemicals</button>
-      <button class="tab" onclick="showSection('process')">▶ Process</button>
-      <button class="tab" onclick="showSection('diagrams')">📊 Diagrams</button>
-      <button class="tab" onclick="showSection('videos')">🎥 Videos</button>
-      <button class="tab" onclick="showSection('applications')">❓ Applications & Q&A</button>
-    </nav>
+  <button class="tab active" onclick="showSection(event, 'group')">👥 Group Details</button>
+  <button class="tab" onclick="showSection(event, 'chemicals')">🧴 Chemicals</button>
+  <button class="tab" onclick="showSection(event, 'process')">▶ Process</button>
+  <button class="tab" onclick="showSection(event, 'diagrams')">📊 Diagrams</button>
+  <button class="tab" onclick="showSection(event, 'videos')">🎥 Videos</button>
+  <button class="tab" onclick="showSection(event, 'applications')">❓ Applications & Q&A</button>
+</nav>
+
   </header>
 
   <!-- ================= GROUP DETAILS ================= -->
@@ -267,3 +268,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
