@@ -9,18 +9,23 @@
 </head>
 <body>
 
+  <!-- Floating Bubbles Background -->
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
   <header>
     <h1>🧪 Chemistry Prototype – Soap Making</h1>
     <p>Interactive & Animated Educational Website</p>
   </header>
 
   <nav>
-    <button class="tab-btn active" onclick="openTab('group')">Group Details</button>
-    <button class="tab-btn" onclick="openTab('chemicals')">Chemicals</button>
-    <button class="tab-btn" onclick="openTab('process')">Process</button>
-    <button class="tab-btn" onclick="openTab('diagrams')">Diagrams</button>
-    <button class="tab-btn" onclick="openTab('videos')">Videos</button>
-    <button class="tab-btn" onclick="openTab('extra')">Applications & Q&A</button>
+    <button class="tab-btn active" onclick="openTab('group', event)">Group Details</button>
+    <button class="tab-btn" onclick="openTab('chemicals', event)">Chemicals</button>
+    <button class="tab-btn" onclick="openTab('process', event)">Process</button>
+    <button class="tab-btn" onclick="openTab('diagrams', event)">Diagrams</button>
+    <button class="tab-btn" onclick="openTab('videos', event)">Videos</button>
+    <button class="tab-btn" onclick="openTab('extra', event)">Applications & Q&A</button>
   </nav>
 
   <main>
@@ -49,18 +54,52 @@
       </div>
     </section>
 
-    <!-- 3. Process -->
+    <!-- 3. Process (Animated Steps) -->
     <section id="process" class="tab-content">
-      <h2>🔄 Soap Making Process</h2>
-      <ol class="process-list">
-        <li>Measure oils and water</li>
-        <li>Add sodium hydroxide to water carefully</li>
-        <li>Mix lye solution with oils</li>
-        <li>Stir until thick (trace stage)</li>
-        <li>Add fragrance and color</li>
-        <li>Pour into molds and let it cure</li>
-      </ol>
-      <div class="animation-box">🫧 Mixing in progress...</div>
+      <h2>🔄 Soap Making Process (Animated)</h2>
+
+      <div class="process-container">
+        <div class="process-step active">
+          <img src="step1.jpg" alt="Step 1">
+          <h3>Step 1: Measure Ingredients</h3>
+          <p>Measure oils, water, and sodium hydroxide accurately.</p>
+        </div>
+
+        <div class="process-step">
+          <img src="step2.jpg" alt="Step 2">
+          <h3>Step 2: Prepare Lye Solution</h3>
+          <p>Slowly add sodium hydroxide to water (never water to NaOH).</p>
+        </div>
+
+        <div class="process-step">
+          <img src="step3.jpg" alt="Step 3">
+          <h3>Step 3: Mix Oils & Lye</h3>
+          <p>Combine both mixtures and stir until thick (trace stage).</p>
+        </div>
+
+        <div class="process-step">
+          <img src="step4.jpg" alt="Step 4">
+          <h3>Step 4: Add Fragrance & Color</h3>
+          <p>Add natural fragrance and color to the mixture.</p>
+        </div>
+
+        <div class="process-step">
+          <img src="step5.jpg" alt="Step 5">
+          <h3>Step 5: Pour into Molds</h3>
+          <p>Pour mixture into molds and let it harden.</p>
+        </div>
+
+        <div class="process-step">
+          <img src="step6.jpg" alt="Step 6">
+          <h3>Step 6: Curing</h3>
+          <p>Allow the soap to cure for 3–4 weeks before use.</p>
+        </div>
+      </div>
+
+      <div class="process-controls">
+        <button onclick="prevStep()">⬅ Previous</button>
+        <button onclick="nextStep()">Next ➡</button>
+      </div>
     </section>
 
     <!-- 4. Diagrams -->
