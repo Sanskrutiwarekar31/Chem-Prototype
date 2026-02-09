@@ -16,14 +16,15 @@
       <small>Chemistry Project</small>
     </div>
   </div>
-  <nav class="tabs">
-    <button class="tab active" data-tab="group">👥 Group Details</button>
-    <button class="tab" data-tab="chemicals">🧪 Chemicals</button>
-    <button class="tab" data-tab="process">▶ Process</button>
-    <button class="tab" data-tab="diagrams">📊 Diagrams</button>
-    <button class="tab" data-tab="videos">🎥 Videos</button>
-    <button class="tab" data-tab="qa">❓ Applications & Q&A</button>
-  </nav>
+ <nav class="nav-tabs">
+  <button class="tab active" onclick="showSection(event, 'group')">👥 Group Details</button>
+  <button class="tab" onclick="showSection(event, 'chemicals')">🧴 Chemicals</button>
+  <button class="tab" onclick="showSection(event, 'process')">▶ Process</button>
+  <button class="tab" onclick="showSection(event, 'diagrams')">📊 Diagrams</button>
+  <button class="tab" onclick="showSection(event, 'videos')">🎥 Videos</button>
+  <button class="tab" onclick="showSection(event, 'applications')">❓ Applications & Q&A</button>
+</nav>
+
 </header>
 
 <main class="content">
@@ -158,3 +159,4 @@
 
 </body>
 </html>
+
