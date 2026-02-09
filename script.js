@@ -11,6 +11,7 @@ function showSection(event, sectionId) {
   event.currentTarget.classList.add("active");
 }
 
+
 // -------------------- CHEMICAL FILTER --------------------
 function filterChemicals(type) {
   const cards = document.querySelectorAll(".chem-card");
@@ -153,4 +154,5 @@ function stopAutoPlay() {
 
 // Initial UI load
 updateProcessUI();
+
 
