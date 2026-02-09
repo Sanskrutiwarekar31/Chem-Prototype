@@ -153,3 +153,4 @@ function stopAutoPlay() {
 
 // Initial UI load
 updateProcessUI();
+
