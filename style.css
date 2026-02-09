@@ -425,6 +425,129 @@ body {
   margin-top: 10px;
 }
 
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #e6f7f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  color: #1fa39a;
+}
+
+.section-header p {
+  color: #6b7c85;
+  font-size: 16px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 26px;
+  margin: 50px 0 30px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.app-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-6px);
+}
+
+.app-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #e6f7f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.app-card h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.app-card p {
+  font-size: 14px;
+  color: #6b7c85;
+}
+
+.advantages-box {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  margin-bottom: 60px;
+}
+
+.advantages-box h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.advantages-list li {
+  font-size: 15px;
+  color: #2f3b43;
+}
+
+.qa-box details {
+  background: white;
+  padding: 18px 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.qa-box summary {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.qa-box p {
+  margin-top: 10px;
+  color: #5a6b75;
+  font-size: 14px;
+}
+
+
 /* ---------- FOOTER ---------- */
 footer {
   text-align: center;
@@ -432,3 +555,4 @@ footer {
   color: #6b7c85;
   font-size: 14px;
 }
+
