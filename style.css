@@ -557,9 +557,9 @@ footer {
 }
 
 /* ---------- GROUP PHOTO ---------- */
-.group image {
+.group-photo {
   width: 100%;
-  max-width: 120px;   /* change size here */
+  max-width: 140px;   /* small size */
   border-radius: 20px;
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
