@@ -559,10 +559,11 @@ footer {
 /* ---------- GROUP PHOTO ---------- */
 .group-photo {
   width: 100%;
-  max-width: 140px;   /* small size */
+  max-width: 170px;   /* small size */
   border-radius: 20px;
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
+
 
 
 
