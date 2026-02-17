@@ -556,3 +556,12 @@ footer {
   font-size: 14px;
 }
 
+/* ---------- GROUP PHOTO ---------- */
+.group image {
+  width: 100%;
+  max-width: 180px;   /* change size here */
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+
